@@ -27,6 +27,7 @@ Once the server is up and running, you can interact with the Book Library API us
 ## Development
 
 For development purposes, you can use the following npm scripts:
+** The `npm run` command must be in front before running the commands. Ex: `npm run dev`
 
 - **dev**: Run the server in development mode with hot reloading.
 - **clean**: Clean the distribution folder.
