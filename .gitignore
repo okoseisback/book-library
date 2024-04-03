@@ -9,7 +9,6 @@ coverage
 # Prisma generated files
 prisma/.env
 prisma/migration-lock
-prisma/schema.prisma
 prisma/client/
 
 # IDE files

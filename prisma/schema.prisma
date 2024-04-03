@@ -1,0 +1,42 @@
+// This file provides database access using Prisma ORM.
+
+// The 'generator' block specifies how Prisma Client will be generated.
+generator client {
+  provider = "prisma-client-js"
+}
+
+// The 'datasource' block provides the database connection.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Database URL is obtained via environment variable.
+}
+
+// The 'users' model represents users.
+model users {
+  id           Int            @id @default(autoincrement()) // User ID, auto-incremented and specified as primary key.
+  name         String         // User name
+  createdAt    DateTime?      @default(now()) // Creation date, default to current time.
+  transactions transactions[] // Transactions associated with the user.
+}
+
+// The 'books' model represents books.
+model books {
+  id           Int            @id @default(autoincrement()) // Book ID, auto-incremented and specified as primary key.
+  name         String         // Book name
+  score        Float          @default(-1) // Book score, default to -1.
+  createdAt    DateTime?      @default(now()) // Creation date, default to current time.
+  transactions transactions[] // Transactions associated with the book.
+}
+
+// The 'transactions' model represents transactions.
+model transactions {
+  id         Int       @id @default(autoincrement()) // Transaction ID, auto-incremented and specified as primary key.
+  user       users     @relation(fields: [userId], references: [id]) // Relation with user, referencing the user ID field.
+  userId     Int       // User ID
+  book       books     @relation(fields: [bookId], references: [id]) // Relation with book, referencing the book ID field.
+  bookId     Int       // Book ID
+  userScore  Float     @default(-1) // User score, default to -1.
+  borrowedAt DateTime  @default(now()) // Borrowed date, default to current time.
+  returnedAt DateTime? // Returned date, can be null.
+  createdAt  DateTime? @default(now()) // Creation date, default to current time.
+}
