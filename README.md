@@ -41,6 +41,24 @@ For development purposes, you can use the following npm scripts:
 - **prisma:db:seed**: Seed the database with initial data.
 - **swagger-gen**: Generate Swagger documentation.
 
+## Quick Start for Development
+
+```bash
+npm run prisma:db:gen
+```
+
+```bash
+npm run prisma:db:migrate:reset
+```
+
+```bash
+npm run prisma:db:seed
+```
+
+```bash
+npm run dev
+```
+
 ## Production
 
 1. Build the project:
