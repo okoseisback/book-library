@@ -79,6 +79,7 @@ When the application is started with `npm run dev` or `npm run start`, you can a
 
 ## Technologies Used
 
+- **PostgreSQL**: Powerful relational database management system.
 - **Express.js**: Web framework for Node.js.
 - **Prisma**: ORM for TypeScript and Node.js.
 - **Swagger UI Express**: Middleware to serve auto-generated Swagger UI.
