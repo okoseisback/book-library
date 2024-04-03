@@ -17,7 +17,7 @@
     "test": "jest",
     "test:cov": "npm run test --coverage --watchAll",
     "test:watch": "npm run  test --watchAll",
-    "prisma:db:gen": "prisma generate",
+    "prisma:gen": "prisma generate",
     "prisma:db:migrate:reset": "prisma migrate reset",
     "prisma:db:seed": "ts-node-dev prisma/seed.ts",
     "swagger-gen": "node swagger.js"

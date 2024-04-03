@@ -36,7 +36,7 @@ For development purposes, you can use the following npm scripts:
 - **test**: Run tests using Jest.
 - **test:cov**: Run tests with coverage report.
 - **test:watch**: Run tests in watch mode.
-- **prisma:db:gen**: Generate Prisma client.
+- **prisma:gen**: Generate Prisma client.
 - **prisma:db:migrate:reset**: Reset database migrations.
 - **prisma:db:seed**: Seed the database with initial data.
 - **swagger-gen**: Generate Swagger documentation.
@@ -44,7 +44,7 @@ For development purposes, you can use the following npm scripts:
 ## Quick Start for Development
 
 ```bash
-npm run prisma:db:gen
+npm run prisma:gen
 ```
 
 ```bash
